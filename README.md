@@ -32,10 +32,10 @@ This file describes stages and **API ID**.
   "dev": {}
 }
 ```
-You can grab `restApiId` from the adress bar.
+You can grab `restApiId` from the address bar.
 ![API ID](./resources/apiid.png)
 
-Also it's possible to pass stage viraables.
+Also it's possible to pass stage variables.
 ```json
 {
   "restApiId": "xxxxxxxxxx",
@@ -60,12 +60,12 @@ What you have to know if you are using custom lambda authorizers.
 Each lambda with alias have to be permited. And the tool allows
 you to do it.
 
-The tool rely you are using lambdas with aliases and generate arn to grant access so:
+The tool rely on you using lambdas with aliases and generating arn to grant access so:
 ```
 arn:aws:lambda:${region}:${accountId}:function:${lambdaName}:${stage}
 ```
 
-Your `securityDefinitions` should looks like that:
+Your `securityDefinitions` should look like that:
 Pay attention to `dev` alias.
 ```json
 "securityDefinitions": {
@@ -88,7 +88,7 @@ Or you can use `stageVariables`:
 
 ##### Placeholders
 Also the tool can substitute placeholders.
-You can use it, for instance in `authorizerUri`.
+For example you can use it in `authorizerUri`.
 
 Placeholders:
  - `{{region}}` region which was passed via CLI
